@@ -1,0 +1,74 @@
+/* Set default margin, padding, and box-sizing for all elements */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set font family, background color, and text color for body */
+body {
+  font-family: cursive;
+  background: #0f0c29;
+  color: #fff;
+}
+
+/* Set height, background, flex properties, and backdrop filter for container */
+.container {
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+/* Set font size, padding, letter spacing, text alignment, overflow, and text shadow for container paragraph */
+.container p {
+  font-size: 3rem;
+  padding: 0.5rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+  text-shadow: 2px 2px #52c234;
+}
+
+/* Set font weight, color, and text shadow for the typed text span */
+.container p span.typed-text {
+  font-weight: normal;
+  color: #52c234;
+  text-shadow: 1px 1px #fff;
+}
+
+/* Set display, background color, margin, and width for the cursor span, as well as animation properties */
+.container p span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+
+/* Set animation to none for typing cursor */
+.container p span.cursor.typing {
+  animation: none;
+}
+
+/* Define the animation for the cursor */
+@keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+  49% {
+    background-color: #ccc;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #ccc;
+  }
+}
